@@ -122,7 +122,7 @@ export default {
     async startStopAudio(index = 0) {
       this.isAudioStart = !this.isAudioStart;
       if (this.isAudioStart) {
-        await this.audiosync.playAllAudio(this.surahs, index);
+        this.audiosync.playAllAudio(this.surahs, index);
       } else {
         await this.audiosync.reset();
       }
