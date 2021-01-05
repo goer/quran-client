@@ -4,24 +4,17 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
+import vuetify from "./vuetify.js";
+// import "vuetify/dist/vuetify.min.css";
 
 import underscore from "vue-underscore";
 Vue.use(underscore);
 
-Vue.use(Vuetify);
-const opts = {
-  icons: {
-    iconfont: "mdi"
-  }
-};
-
-Vue.config.productionTip = false;
+Vue.config.productionTip = true;
 
 new Vue({
   router,
-  vuetify: new Vuetify(opts),
+  vuetify: vuetify,
   render: (h) => h(App),
   mounted() {}
 }).$mount("#app");
